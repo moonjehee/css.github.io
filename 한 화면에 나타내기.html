@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한 화면에 나타내기</title>
+    <style>
+        /* 이력서 */
+        h1 {
+            text-align: center;
+        }
+        a:hover { color: red; }
+        a {
+            text-decoration: none;
+            text-align: center;
+            text-decoration-line: none;
+        } 
+        #button {
+            text-align: right;
+            width: 900px; 
+            margin : 0 auto;
+        }
+        #table1 {
+            text-align: center; 
+            border : 3px solid black;
+            border-collapse : collapse; 
+            width: 900px; 
+            margin : 0 auto;
+            background-image: url('table1.jpg');
+            background-size: 100%;
+        }
+        #table2 {
+            text-align: center; 
+            border : 3px solid black;
+            border-collapse : collapse; 
+            width: 900px; 
+            margin : 0 auto;
+            background-image: url('table2.jpg');
+            background-size: 100%;
+        }
+        #table3 {
+            text-align: center; 
+            border : 3px solid black;
+            border-collapse : collapse; 
+            width: 900px; 
+            margin : 0 auto;
+            background-image: url('table3.jpg');
+            background-size: 100%;
+        }
+        #table4 {
+            text-align: center; 
+            border : 3px solid black;
+            border-collapse : collapse; 
+            width: 900px; 
+            margin : 0 auto;
+            background-image: url('table4.jpg');
+            background-size: 100%;
+        }
+        td, th {
+            border : 1px solid black;
+        }
+        img {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            font-size:  medium;
+        }
+        /* membership */
+        body {
+            height: 10px;
+            background-color: rgb(239, 239, 239);
+            border: 0;
+        }
+        #divAll {
+            margin: 0 auto;
+            width: 500px;
+            height: 970px;
+            border: none;
+            border-radius: 1em;
+        }
+        input:enabled { background-color: rgb(239, 239, 239) }
+        input:focus { background-color: white; }
+        label {
+            font-weight: bold;
+        }
+        #name {
+            width: 400px;
+            height: 40px;
+            border: 1px solid  rgb(206, 206, 206);
+            border-radius: 0.2em;
+            cursor: text;
+        }
+        #file {
+            cursor: pointer;
+        }
+        #man {
+            cursor: pointer;
+        }
+        #woman {
+            cursor: pointer;
+        }
+        #date {
+            width: 403px;
+            height: 44px;
+            border: 1px solid rgb(206, 206, 206);
+            border-radius: 0.2em;
+            cursor: pointer;
+        }
+        #age {
+            width: 400px;
+            height: 40px;
+            border: 1px solid rgb(206, 206, 206);
+            border-radius: 0.2em;
+            cursor: text;
+        }
+        select{
+            width: 405px;
+            height: 45px;
+            border: 1px solid rgb(206, 206, 206);   
+            border-radius: 0.2em;
+            cursor: pointer;
+        }
+        #join {
+            width: 405px;
+            height: 45px;
+            border: none;
+            border: 1px solid dodgerblue;
+            border-radius: 0.2em;
+            background-color: dodgerblue;
+            color: white;
+            font-weight: bolder;
+            font-size:  medium;
+            cursor: pointer;
+        }
+        /* 한 화면에 나타내기 */
+        div.container {
+            overflow: hidden;
+            width: 1535px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.item {
+            float: left;
+            margin: 0 3px;
+            padding: 30px;
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 이력서 div와 membership div를 감싼 div -->
+    <div class="container">
+        <!-- 이력서를 감싼 div -->
+        <div class="item">
+            <h1><ins>이  력  서</ins></h1>
+            <div style="text-decoration: none; text-align: center; font-size: small;">
+            <a href="#신상"><b>신상</b></a>
+            <a href="#학력사항"><b>학력사항</b></a>
+            <a href="#자격면허"><b>자격면허</b></a>
+            <a href="#경험사항"><b>경험사항</b></a>
+            </div>
+            <!-- 오디오 비디오 버튼 -->
+            <table id="button">
+                <tr>
+                    <td style="border: none;">
+                        <button style="width: 300x; height: 30px; background-color: LightGray;"><a href='audio.html' target='_blank' 
+                        style="text-decoration: none; font-size: small; color: black; font-weight: bold;">오디오</a></button>
+                        <button style="width: 300x; height: 30px; background-color: LightGray;"><a href='video.html' target='_blank' 
+                        style="text-decoration: none; font-size: small; color: black; font-weight: bold;">비디오</a></button>
+                    </td>
+                </tr>
+            </table>
+            <!-- table 1 -->
+            <h1 id="신상"></h1>
+            <table id="table1">
+                <tr>
+                    <th rowspan="5" width="140"><img src="증명사진.jpg" width="130" height="165"></th>
+                    <th rowspan="3" width="90" bgcolor="LightGray">성명</th>
+                    <td width="340" height="30">&nbsp;(한글) 문제희</td>
+                    <th width="90" bgcolor="LightGray">지원분야</th>
+                    <td width="240"><i>개발자</i></td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;(한자) 文堤熙</td>
+                    <th bgcolor="LightGray">연락처</th>
+                    <td>010-2606-9199</td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp;(영문) Moon JeHee</td>
+                    <th bgcolor="LightGray">e-mail</th>
+                    <td>najehee513@naver.com</td>
+                </tr>
+                <tr>
+                    <th bgcolor="LightGray">생년월일</th>
+                    <td>2005.01.03</td>
+                    <th bgcolor="LightGray">보훈대상</th>
+                    <td>대상 (&nbsp;&nbsp;&nbsp;) 비대상 (&nbsp;O&nbsp;)</td>
+                </tr>
+                <tr>
+                    <th height="45" bgcolor="LightGray">주소</th>
+                    <td colspan="3">경기도 성남시 수정구 위레동로61, 5616동 1204호</td>
+                </tr>
+            </table>
+            <!-- table 2 -->
+            <h1 id="학력사항"></h1>
+            <table id="table2">
+                <tr>
+                    <th rowspan="5" width="30" bgcolor="LightGray">학력사항</th>
+                    <th width="200" height="30" bgcolor="LightGray">기 간</th>
+                    <th width="200" bgcolor="LightGray">출 신 학 교</th>
+                    <th width="190" bgcolor="LightGray">전 공</th>
+                    <th width="160" bgcolor="LightGray">학 점</th>
+                    <th width="120" bgcolor="LightGray">졸업여부</th>
+                </tr>
+                <tr>
+                    <td height="30">2011.03 ~ 2017.02</td>
+                    <td>복정초등학교</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>졸업</td>
+                </tr>
+                <tr>
+                    <td height="30">2017.03 ~ 2020.02</td>
+                    <td>위례한빛중학교</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>졸업</td>
+                </tr>
+                <tr>
+                    <td height="30">2020.03 ~ 2023.02</td>
+                    <td>위례한빛고등학교</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>졸업</td>
+                </tr>
+                <tr>
+                    <td height="30">2023.03 ~</td>
+                    <td>한양여자대학교</td>
+                    <td>빅데이터과</td>
+                    <td>-</td>
+                    <td>재학</td>
+                </tr>
+            </table>
+            <!-- table 3 -->
+            <h1 id="자격면허"></h1>
+            <table id="table3">
+                <tr>
+                    <th rowspan="2" width="30" bgcolor="LightGray">자격면허</th>
+                    <th width="275" height="25" bgcolor="LightGray">자 격 증( 면 허 )명</th>
+                    <th width="140" bgcolor="LightGray">등 급</th>
+                    <th width="160" bgcolor="LightGray">취 득 년 월 일</th>
+                    <th width="295" bgcolor="LightGray">발 행 기 관</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td height="35">-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            <!-- table 4 -->
+            <h1 id="경험사항"></h1>
+            <table id="table4">
+                <tr>
+                    <th rowspan="2" width="30" bgcolor="LightGray">경험사항</th>
+                    <th width="283" height="35" bgcolor="LightGray">기 관 명</th>
+                    <th width="242" bgcolor="LightGray">기 간</th>
+                    <th width="375" bgcolor="LightGray">업 무 내 용</th>
+                </tr>
+                <tr>
+                    <td height="55">-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            <p></p>
+            <footer>2 3 0 2 5 4 9 문 제 희</footer>
+        </div>
+        <!-- membership을 감싼 div -->
+        <div class="item">
+            <form>
+                <div id="divAll">
+                    <h1 style="text-align: left;">회원가입</h1>
+                    <!-- 이름 -->
+                    <div>
+                        <label>이름</label>
+                        <p></p>
+                        <input type="text" id="name" value="">
+                    </div>
+                    <p></p>
+                    <!-- 사진 -->
+                    <div>
+                        <label>사진</label>
+                    <p></p>
+                        <input type="file" id="file" value="">
+                    </div>
+                    <p></p>
+                    <!-- 성별 -->
+                    <div>
+                        <label>성별</label>
+                        <p></p>
+                        <input id="man" type="radio" name="gender" value="m"><label for="man">남자</label>
+                        <input id="woman" type="radio" name="gender" value="w" checked="checked"><label for="woman">여자</label>
+                    </div>
+                    <p></p>
+                    <!-- 생년월일 양력 -->
+                    <div>
+                        <label>생년월일(양력)</label>
+                        <p></p>
+                        <input type="date" id="date" value="">
+                    </div>
+                    <p></p>
+                    <!-- 생년월일 음력 -->
+                    <div>
+                        <label>생년월일(음력)</label>
+                        <p></p>
+                        <input type="date" id="date" value="">
+                    </div>
+                    <p></p>
+                    <!-- 나이 -->
+                    <div>
+                        <label>나이</label>
+                        <p></p>
+                        <input type="text" id="age" value="">
+                    </div>
+                    <p></p>
+                    <!-- 주소 -->
+                    <div>
+                        <label>주소</label>
+                    </div>
+                    <p></p>
+                    <!-- 우편번호 -->
+                    <span>
+                        <input type="text" style="width: 250px; height: 40px; border : 1px solid rgb(206, 206, 206); border-radius: 0.2em; cursor: text;">
+                    </span>
+                    <span>
+                        <button style="display: inline-block; width: 150px; height: 44px; background-color: dodgerblue; border: 1px solid dodgerblue; border-radius: 0.2em; color: white; font-weight: bolder; font-size:  medium; cursor: pointer;">우편번호 찾기</button><br>
+                    </span>
+                    <p></p>
+                    <!-- 주소 -->
+                    <div>
+                        <input type="text" name="text" placeholder="주소" style="width: 400px; height: 40px; border : 1px solid rgb(206, 206, 206); border-radius: 0.2em; cursor: text;">
+                    </div>
+                    <p></p>
+                    <!-- 상세주소 -->
+                    <div>
+                        <input type="text" name="text" placeholder="상세주소" style="width: 400px; height: 40px; border : 1px solid rgb(206, 206, 206); border-radius: 0.2em; cursor: text;">
+                    </div>
+                    <p></p>
+                    <!-- 가입 이유 -->
+                    <div>
+                        <label>가입이유</label>
+                        <p></p>
+                        <select>
+                            <option>가입이유 1</option>
+                            <option>가입이유 2</option>
+                            <option>가입이유 3</option>
+                            <option>가입이유 4</option>
+                            <option>가입이유 5</option>
+                        </select>
+                    </div>
+                    <p></p>
+                    <!-- 가입하기 -->
+                    <div>
+                        <button id="join">가입하기</button>
+                    </div>
+                </div>
+            </form>
+            <p></p>
+            <footer style="text-align: left;">2 3 0 2 5 4 9 문 제 희</footer>
+        </div>
+    </div>
+</body>
+</html>
